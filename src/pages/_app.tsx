@@ -1,12 +1,13 @@
 import React from "react";
 
-import "@/styles/global.css";
 import { setup } from "goober";
 import { prefix } from "goober-autoprefixer";
 
 import type { AppProps } from "next/app";
 import Layout from "@/components/layout";
 import GlobalStyles from "@/styles/GlobalStyles";
+
+import "@/styles/swiperStyles.css"
 
 setup(React.createElement, prefix);
 
@@ -15,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Layout>
         <GlobalStyles />
-        <main className="container flex flex-col justify-center items-center min-h-screen">
+        <main>
           <Component {...pageProps} />
         </main>
       </Layout>

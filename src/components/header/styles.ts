@@ -14,6 +14,7 @@ export const Header = styled("header")`
   position: fixed;
   width: 100%;
   height: clamp(72px, 10%, 72px);
+  z-index: 1000;
 
   > label {
     width: 100%;

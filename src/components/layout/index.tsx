@@ -13,7 +13,7 @@ const DMSans = DM_Sans({
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className={`${DMSans.className}`}>
+    <div className={`${DMSans.className}`} style={{ position: "relative" }}>
       <Header />
       {children}
       <Footer />
