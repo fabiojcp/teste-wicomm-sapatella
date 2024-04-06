@@ -1,5 +1,6 @@
 import Seo from "@/components/Seo";
 import BannerCarousel from "@/components/bannerCarousel";
+import BannerModal from "@/components/bannerModal";
 
 const HomePage = () => {
   return (
@@ -15,18 +16,21 @@ const HomePage = () => {
               src: "/assets/banners/banner.png",
               alt: "ícone de uma lupa",
             },
+            children: <BannerModal />,
           },
           {
             image: {
               src: "/assets/banners/banner.png",
               alt: "ícone de uma lupa",
             },
+            children: <BannerModal />,
           },
           {
             image: {
               src: "/assets/banners/banner.png",
               alt: "ícone de uma lupa",
             },
+            children: <BannerModal />,
           },
         ]}
       />

@@ -95,6 +95,7 @@ export default createGlobalStyle`
 
   html, html:root, &:root {
     --pink: #cf215b;
+    --pinkLight: #D33C6F;
     --white: #FFFFFF;
     --white30: #FFFFFF30;
     --black: rgb(0,0,0);

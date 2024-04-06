@@ -49,12 +49,12 @@ export const Icon = styled("img")<{ styled?: string }>`
 `;
 
 export const Input = styled("input")`
-  opacity: 0.3;
   width: 100%;
   height: 100%;
   padding: 0 1rem;
   border: 1px solid var(--lightGrey);
   outline: none !important;
+  color: rgba(0, 0, 0, 1) !important;
 
   &:focus,
   &:focus-visible,
@@ -65,7 +65,30 @@ export const Input = styled("input")`
   &:placeholder {
     padding: 0 2rem;
   }
-  &-webkit-search-cancel-button {
+  &::-webkit-search-cancel-button {
     display: none;
+  }
+
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder,
+  &:-moz-placeholder,
+  &::-ms-input-placeholder {
+    opacity: 0.3;
+  }
+
+  &::-ms-value,
+  &::-webkit-textfield-decoration-container,
+  &::-webkit-text-fill-color,
+  > div,
+  > div > div,
+  &::value {
+    color: rgba(0, 0, 0, 1) !important;
+    opacity: 1;
+
+    *,
+    div > div {
+      opacity: 1 !important;
+    }
   }
 `;

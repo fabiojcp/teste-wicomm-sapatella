@@ -54,7 +54,7 @@ export const Header = styled("header")`
     width: clamp(40%, 100%, 540px);
     white-space: nowrap;
     > a {
-      font-size: 1.125rem;
+      font-size: 16px !important;
       color: var(--white);
     }
   }
@@ -72,7 +72,7 @@ export const NavProducts = styled("nav")`
 `;
 
 export const AnchorProducts = styled("a")`
-  font-size: 1.125rem;
+  font-size: 16px !important;
   color: var(--white);
 `;
 

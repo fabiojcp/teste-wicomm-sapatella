@@ -6,4 +6,5 @@ export const Wrapper = styled("section")`
   > img {
     object-fit: cover;
   }
+  position: relative;
 `;
