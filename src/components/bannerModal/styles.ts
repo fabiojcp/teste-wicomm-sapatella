@@ -70,14 +70,14 @@ export const ButtonWrapper = styled("section")`
       transition: width 0.3s ease 0s, left 0.3s ease 0s;
       width: 0;
     }
-
-    > p:hover:after {
-      width: 50%;
-      left: 25%;
-    }
   }
 
   &:hover {
     background-color: var(--pinkLight);
+
+    > a > p:after {
+      width: 50%;
+      left: 25%;
+    }
   }
 `;
