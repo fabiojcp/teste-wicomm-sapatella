@@ -101,7 +101,9 @@ export default createGlobalStyle`
     --white30: #FFFFFF30;
     --black: rgb(0,0,0);
     --black40: rgb(0,0,0,0.4);
-    --black03: #d3d3d3
+    --black4F: #4F4F4F;
+    --black03: #d3d3d3;
+    --lightGrey: #F5F5F5;
   }
 
   html, body, div, span, applet, object, iframe,

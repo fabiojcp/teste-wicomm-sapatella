@@ -1,6 +1,7 @@
 import Seo from "@/components/Seo";
 import BannerCarousel from "@/components/bannerCarousel";
 import BannerModal from "@/components/bannerModal";
+import PaymentBanner from "@/components/paymentBanner";
 
 const HomePage = () => {
   return (
@@ -10,30 +11,16 @@ const HomePage = () => {
         description="Oi, a gente já se conhece? Muito prazer, Sapatella! Somos uma Marca de moda que oferece sapatos e acessórios feitos para te encantar. Vamos juntas?"
       />
       <BannerCarousel
-        items={[
-          {
-            image: {
-              src: "/assets/banners/banner.png",
-              alt: "ícone de uma lupa",
-            },
-            children: <BannerModal />,
+        items={Array.from({ length: 3 }, () => ({
+          image: {
+            src: "/assets/banners/banner.png",
+            alt: "ícone de uma lupa",
           },
-          {
-            image: {
-              src: "/assets/banners/banner.png",
-              alt: "ícone de uma lupa",
-            },
-            children: <BannerModal />,
-          },
-          {
-            image: {
-              src: "/assets/banners/banner.png",
-              alt: "ícone de uma lupa",
-            },
-            children: <BannerModal />,
-          },
-        ]}
+          children: <BannerModal />,
+        }))}
       />
+
+      <PaymentBanner />
     </>
   );
 };
