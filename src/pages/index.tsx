@@ -2,6 +2,7 @@ import Seo from "@/components/Seo";
 import BannerCarousel from "@/components/bannerCarousel";
 import BannerModal from "@/components/bannerModal";
 import PaymentBanner from "@/components/paymentBanner";
+import ProductsSections from "@/components/productsSection";
 
 const HomePage = () => {
   return (
@@ -21,6 +22,7 @@ const HomePage = () => {
       />
 
       <PaymentBanner />
+      <ProductsSections />
     </>
   );
 };

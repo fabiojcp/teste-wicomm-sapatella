@@ -99,6 +99,7 @@ export default createGlobalStyle`
     --pinkLight: #D33C6F;
     --white: #FFFFFF;
     --white30: #FFFFFF30;
+    --vannila: #fcfcfc;
     --black: rgb(0,0,0);
     --black40: rgb(0,0,0,0.4);
     --black4F: #4F4F4F;
