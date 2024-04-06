@@ -52,10 +52,29 @@ export const ButtonWrapper = styled("section")`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px !important;
-    line-height: 24px;
-    font-weight: normal;
-    color: var(--white);
+
+    > p {
+      font-size: 16px !important;
+      line-height: 24px;
+      font-weight: normal;
+      color: var(--white);
+    }
+    > p:after {
+      background: none repeat scroll 0 0 transparent;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 25%;
+      position: absolute;
+      background: #fff;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+
+    > p:hover:after {
+      width: 50%;
+      left: 25%;
+    }
   }
 
   &:hover {

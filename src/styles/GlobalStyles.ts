@@ -91,6 +91,7 @@ export default createGlobalStyle`
   /* Firefox */
   input[type=number] {
     -moz-appearance: textfield;
+    appearance: textfield;
   }
 
   html, html:root, &:root {

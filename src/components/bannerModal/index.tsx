@@ -22,7 +22,9 @@ const BannerModal = () => {
       </S.ImageWrapper>
 
       <S.ButtonWrapper>
-        <Link href="/">Conferir</Link>
+        <Link href="/">
+          <p>Conferir</p>
+        </Link>
       </S.ButtonWrapper>
     </S.Wrapper>
   );
