@@ -5,6 +5,26 @@ export const Wrapper = styled("section")`
   width: 100%;
   position: relative;
 
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: var(--white80) !important;
+    color: var(--black) !important;
+
+    &:after {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 24px;
+      margin: 0 auto !important;
+    }
+  }
+
   > div > .swiper-wrapper > .swiper-slide {
     display: flex;
     align-items: center;

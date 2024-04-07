@@ -20,6 +20,10 @@ export const Header = styled("header")`
     width: 100%;
   }
 
+  > a:first-child > img {
+    cursor: pointer;
+  }
+
   &:hover {
     background: var(--white);
 
@@ -69,6 +73,10 @@ export const NavProducts = styled("nav")`
   gap: 2%;
   width: clamp(40%, 100%, 540px);
   white-space: nowrap;
+
+  > a {
+    cursor: pointer;
+  }
 `;
 
 export const AnchorProducts = styled("a")`
@@ -79,4 +87,8 @@ export const AnchorProducts = styled("a")`
 export const NavIcons = styled("nav")`
   display: flex;
   gap: 24px;
+
+  > img {
+    cursor: pointer;
+  }
 `;

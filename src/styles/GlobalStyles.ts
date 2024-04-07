@@ -98,6 +98,7 @@ export default createGlobalStyle`
     --pink: #cf215b;
     --pinkLight: #D33C6F;
     --white: #FFFFFF;
+    --white80: #FFFFFF80;
     --white30: #FFFFFF30;
     --vannila: #fcfcfc;
     --black: rgb(0,0,0);
@@ -126,6 +127,7 @@ time, mark, audio, video, main {
 	font-size: 100% !important;
 	font: inherit;
 	vertical-align: baseline;
+  cursor: default;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 

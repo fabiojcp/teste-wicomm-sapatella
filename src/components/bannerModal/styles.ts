@@ -52,6 +52,7 @@ export const ButtonWrapper = styled("section")`
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer !important;
 
     > p {
       font-size: 16px !important;

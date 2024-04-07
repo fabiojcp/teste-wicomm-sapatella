@@ -36,4 +36,5 @@ export const Caption = styled("figcaption")`
   font-size: 16px !important;
   line-height: 22px !important;
   color: var(--black4F);
+  cursor: pointer;
 `;

@@ -18,16 +18,23 @@ const WeekFavorites: React.FC = () => {
           className="mySwiper"
           navigation={true}
           modules={[Navigation, Pagination]}
-          pagination={{ clickable: true }}
+          pagination={{
+            clickable: true,
+            // el: pagination.current,
+            // renderBullet: (idx, className) => {
+            //   return RenderBullets(idx, className);
+            // },
+          }}
           slidesPerGroup={4}
           slidesPerView={4}
           loop
+          nested={true}
         >
           {Array.from({ length: 12 }, (_, index) => products[index % 4]).map(
             (item, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <ProductCard item={item} />;
+                  <ProductCard item={item} />
                 </SwiperSlide>
               );
             }

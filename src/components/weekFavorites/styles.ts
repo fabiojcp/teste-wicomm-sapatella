@@ -1,32 +1,26 @@
 import { styled } from "goober";
 
 export const Wrapper = styled("section")`
-  height: 85vh;
   width: 100%;
   padding: 2% 5% !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
   row-gap: 24px;
-`;
+  padding-bottom: 50px !important;
 
-export const Title = styled("h2")`
-  font-size: 24px !important;
-  line-height: 32px !important;
-  color: var(--black4F);
-  text-align: center;
-`;
-
-export const ProductsWrapper = styled("div")`
-  width: 100%;
-
-  .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .swiper-pagination-bullets {
+    display: flex !important;
+    justify-content: center !important;
+    column-gap: 8px !important;
+    height: 8px !important;
+  }
+  .swiper-pagination {
+    bottom: 0px !important;
   }
 
   .swiper-pagination-bullet {
+    display: block !important;
     height: 8px !important;
     width: 8px !important;
     border-radius: 0 !important;
@@ -42,5 +36,42 @@ export const ProductsWrapper = styled("div")`
   .swiper-pagination-bullet-active {
     width: 16px !important;
     background-color: var(--pink) !important;
+  }
+`;
+
+export const Title = styled("h2")`
+  font-size: 24px !important;
+  line-height: 32px !important;
+  color: var(--black4F);
+  text-align: center;
+`;
+
+export const ProductsWrapper = styled("div")`
+  width: 100%;
+  height: 450px !important;
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: var(--white80) !important;
+    color: var(--black) !important;
+
+    &:after {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 24px;
+      margin: 0 auto !important;
+    }
   }
 `;

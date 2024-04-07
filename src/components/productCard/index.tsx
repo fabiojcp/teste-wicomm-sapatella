@@ -1,6 +1,14 @@
+import React, { useEffect, useState } from "react";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+
 import Image from "next/image";
 import * as S from "./styles";
-import { useState } from "react";
+import useLocalStorage from "@/hooks/useLocalStorage";
+import { NavigationOptions } from "swiper/types";
 
 interface ProductCardProps {
   imgSrc: string;
@@ -28,6 +36,12 @@ const ProductCard = ({ item }: { item: ProductCardProps }) => {
   } = item;
 
   const [like, setLike] = useState(false);
+  const [sizeSelected, setSizeSelected] = useState<number | undefined>(
+    undefined
+  );
+
+  const navigationPrevRef = React.useRef(null);
+  const navigationNextRef = React.useRef(null);
 
   return (
     <S.Wrapper>
@@ -36,24 +50,86 @@ const ProductCard = ({ item }: { item: ProductCardProps }) => {
 
         {discount && <S.ImgPromo>{discount}% OFF</S.ImgPromo>}
 
-        <S.ImgIcon like={like ? 1 : 0}>
+        <S.ImgIcon>
           <Image
-            src="/assets/icons/heartLineBlack.svg"
+            src={
+              like
+                ? "/assets/icons/heartFullPink.svg"
+                : "/assets/icons/heartLineBlack.svg"
+            }
             alt="Heart icon"
             width={24}
             height={24}
             priority
-            onClick={() => {
-              setLike(!like);
-            }}
+            onClick={() => setLike(!like)}
           />
         </S.ImgIcon>
 
-        <S.InfoWrapper>
-          <S.InfoTitle>Selecione um tamanho</S.InfoTitle>
-          {sizes.map((size, index) => (
-            <S.InfoSizes key={index}>{size}</S.InfoSizes>
-          ))}
+        <S.InfoWrapper id="info-wrapper">
+          <S.InfoTextWrapper id="swiper-button-custom">
+            <S.InfoTitle>Selecione um tamanho</S.InfoTitle>
+            <Swiper
+              className="mySwiper"
+              navigation={{
+                enabled: true,
+                prevEl: navigationPrevRef.current,
+                nextEl: navigationNextRef.current,
+              }}
+              modules={[Navigation]}
+              slidesPerView={5}
+              nested={true}
+              spaceBetween={1}
+              allowTouchMove={false}
+              onSwiper={(swiper) => {
+                // Delay execution for the refs to be defined
+                setTimeout(() => {
+                  if (swiper?.params?.navigation) {
+                    const navigationOptions = swiper.params
+                      .navigation as NavigationOptions;
+                    navigationOptions.prevEl = navigationPrevRef.current;
+                    navigationOptions.nextEl = navigationNextRef.current;
+
+                    // Re-init navigation
+                    swiper.navigation.destroy();
+                    swiper.navigation.init();
+                    swiper.navigation.update();
+                  }
+                });
+              }}
+            >
+              {sizes.map((size, index) => (
+                <SwiperSlide key={index} onClick={() => setSizeSelected(index)}>
+                  <S.InfoSizes
+                    selected={sizeSelected && sizeSelected === index ? 1 : 0}
+                  >
+                    {size}
+                  </S.InfoSizes>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <div ref={navigationPrevRef} className="swiper-button-prev-custom">
+              <Image
+                src="/assets/icons/chevron.svg"
+                alt="Next button"
+                width={24}
+                height={24}
+                priority
+              />
+            </div>
+            <div
+              ref={navigationNextRef}
+              className="swiper-button-next-custom"
+              onClick={(e) => console.log(e)}
+            >
+              <Image
+                src="/assets/icons/chevron.svg"
+                alt="Previous button"
+                width={24}
+                height={24}
+                priority
+              />
+            </div>
+          </S.InfoTextWrapper>
           <S.InfoButton>Adicionar à sacola</S.InfoButton>
         </S.InfoWrapper>
       </S.ImgWrapper>
