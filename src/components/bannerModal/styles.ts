@@ -45,6 +45,11 @@ export const ButtonWrapper = styled("section")`
   bottom: -20px;
   left: calc(50% - 78px);
   margin: auto auto !important;
+  cursor: pointer;
+
+  * {
+    cursor: pointer;
+  }
 
   > a {
     width: 100%;

@@ -1,7 +1,7 @@
 import React from "react";
 import CarouselItem from "./carouselItem";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -30,8 +30,15 @@ const BannerCarousel = ({ items }: BannerCarouselProps) => {
       <Swiper
         className="mySwiper"
         navigation={true}
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Autoplay]}
         pagination={{ clickable: true }}
+        autoplay={{
+          delay: 5000,
+          stopOnLastSlide: false,
+          pauseOnMouseEnter: true,
+          disableOnInteraction: false,
+        }}
+        loop
       >
         {items.map((item, index) => {
           return (

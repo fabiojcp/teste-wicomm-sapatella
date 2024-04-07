@@ -36,7 +36,12 @@ const MultiCarousel = ({ item }: { item: MultiCarouselProps }) => {
       <Swiper
         className="mySwiper"
         navigation={false}
-        autoplay={{ delay: 3000, stopOnLastSlide: false }}
+        autoplay={{
+          delay: 3000,
+          stopOnLastSlide: false,
+          pauseOnMouseEnter: true,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
           el: "#swiper-custom-pagination",
