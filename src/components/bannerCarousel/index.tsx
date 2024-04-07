@@ -33,7 +33,7 @@ const BannerCarousel = ({ items }: BannerCarouselProps) => {
         modules={[Navigation, Pagination, Autoplay]}
         pagination={{ clickable: true }}
         autoplay={{
-          delay: 5000,
+          delay: 3000,
           stopOnLastSlide: false,
           pauseOnMouseEnter: true,
           disableOnInteraction: false,

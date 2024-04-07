@@ -39,8 +39,6 @@ const MultiCarousel = ({ item }: { item: MultiCarouselProps }) => {
         autoplay={{
           delay: 3000,
           stopOnLastSlide: false,
-          pauseOnMouseEnter: true,
-          disableOnInteraction: false,
         }}
         pagination={{
           clickable: true,
