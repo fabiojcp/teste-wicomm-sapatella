@@ -1,7 +1,7 @@
 import { keyframes, styled } from "goober";
 
 export const Wrapper = styled("section")`
-  height: 60vh;
+  height: 70vh;
   width: 100%;
   background-color: var(--lightGrey) !important;
   position: relative;
@@ -13,10 +13,15 @@ export const Wrapper = styled("section")`
   .swiper {
     display: flex;
     justify-content: flex-end;
+    width: fit-content !important;
   }
 
   .swiper-slide {
     background-color: transparent;
+  }
+
+  .swiper-wrapper {
+    gap: 0;
   }
 `;
 
@@ -102,12 +107,11 @@ export const ImageWrapper = styled("figure")`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   aspect-ratio: 287 / 201;
-  width: 80%;
-  margin-left: 10% !important;
 
   > img {
     object-fit: cover;
-    height: 100%;
+    width: 100%;
   }
 `;
