@@ -4,6 +4,7 @@ import BannerModal from "@/components/bannerModal";
 import MultiCarousel from "@/components/multiCarousel";
 import PaymentBanner from "@/components/paymentBanner";
 import ProductsSections from "@/components/productsSection";
+import ProductsSectionHighlight from "@/components/productsSectionHighlight";
 import WeekFavorites from "@/components/weekFavorites";
 
 import * as Static from "@/static";
@@ -25,6 +26,7 @@ const HomePage = () => {
       <MultiCarousel item={Static.multiCarouselItems} />
 
       <WeekFavorites />
+      <ProductsSectionHighlight />
     </>
   );
 };
