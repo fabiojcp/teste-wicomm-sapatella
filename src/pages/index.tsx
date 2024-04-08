@@ -1,6 +1,7 @@
 import Seo from "@/components/Seo";
 import BannerCarousel from "@/components/bannerCarousel";
 import BannerModal from "@/components/bannerModal";
+import ImageSection from "@/components/imageSection";
 import MultiCarousel from "@/components/multiCarousel";
 import PaymentBanner from "@/components/paymentBanner";
 import ProductsSections from "@/components/productsSection";
@@ -36,6 +37,7 @@ const HomePage = () => {
       />
       <ProductsSectionHighlight />
       <SplitedSection />
+      <ImageSection />
     </>
   );
 };
