@@ -107,7 +107,7 @@ const ProductCard = ({ item }: { item: ProductCardProps }) => {
               {sizes.map((size, index) => (
                 <SwiperSlide key={index} onClick={() => setSizeSelected(index)}>
                   <S.InfoSizes
-                    selected={sizeSelected && sizeSelected === index ? 1 : 0}
+                    selected={sizeSelected !== undefined && sizeSelected === index ? 1 : 0}
                   >
                     {size}
                   </S.InfoSizes>
