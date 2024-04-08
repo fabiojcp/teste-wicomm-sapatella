@@ -92,7 +92,7 @@ export const PaymentMethods = {
       height: 24,
     },
     {
-      src: "/assets/icons/footer/elo.svg",
+      src: "/assets/icons/footer/elo2.svg",
       alt: "Elo logo",
       width: 34,
       height: 24,
