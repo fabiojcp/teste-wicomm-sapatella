@@ -21,14 +21,11 @@ export const Header = styled("header")`
     width: 100%;
   }
 
-  > a:first-child > img {
-    cursor: pointer;
-  }
-
   &:hover {
     background: var(--white);
 
     > a,
+    > div > a,
     > nav > a,
     > a > img {
       color: var(--black) !important;
@@ -39,6 +36,7 @@ export const Header = styled("header")`
     }
 
     > a > img,
+    > div > a > img,
     > label > img,
     > nav:nth-child(4) > img {
       filter: invert(1);
@@ -49,7 +47,7 @@ export const Header = styled("header")`
     }
   }
 
-  > a:first-child {
+  > div:first-child {
     margin: 0 4%;
   }
 
@@ -65,10 +63,6 @@ export const Header = styled("header")`
   }
 `;
 
-export const AnchorLogo = styled("a")`
-  margin: 0 4%;
-`;
-
 export const NavProducts = styled("nav")`
   display: flex;
   gap: 2%;
@@ -78,11 +72,6 @@ export const NavProducts = styled("nav")`
   > a {
     cursor: pointer;
   }
-`;
-
-export const AnchorProducts = styled("a")`
-  font-size: 16px !important;
-  color: var(--white);
 `;
 
 export const NavIcons = styled("nav")`

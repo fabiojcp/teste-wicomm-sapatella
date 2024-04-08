@@ -2,21 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Input from "../input";
 import * as S from "./styles";
+import Logo from "@/components/logo";
 
 const Header = () => {
   return (
     <S.Header>
-      <Link href="/">
-        <Image
-          src="/assets/images/logo_sapatella_branco.svg"
-          alt="logo-sapatella-white"
-          width={183}
-          height={72}
-          priority={true}
-          quality={25}
-          style={{ width: 183, height: 72 }}
-        />
-      </Link>
+      <Logo />
       <S.NavProducts>
         <Link href="/">Novidades</Link>
         <Link href="/">Sapatos</Link>
