@@ -25,7 +25,7 @@ export const ProductsSectionHighlight = () => {
         </Link>
 
         <Image
-          src="/assets/images/highLight/0.png"
+          src="/assets/images/highLight/0.webp"
           width={376}
           height={302}
           alt="Foto de pés de uma mulher com rasteiras brancas"
@@ -34,7 +34,7 @@ export const ProductsSectionHighlight = () => {
 
       <S.FromBottom>
         <Image
-          src="/assets/images/highLight/1.png"
+          src="/assets/images/highLight/1.webp"
           width={376}
           height={456}
           alt="Foto de pés de uma mulher com sandália rosa"
@@ -55,7 +55,7 @@ export const ProductsSectionHighlight = () => {
 
       <S.FromBottom style={{ alignItems: "center", textAlign: "center" }}>
         <Image
-          src="/assets/images/highLight/2.png"
+          src="/assets/images/highLight/2.webp"
           width={376}
           height={354}
           alt="Foto de pés de uma mulher com tênis branco"

@@ -1,6 +1,6 @@
 export const products = [
   {
-    imgSrc: "/assets/images/products/0.png",
+    imgSrc: "/assets/images/products/0.webp",
     imgAlt: "Tênis branco",
     discount: 36,
     sizes: [34, 35, 36, 37, 38, 39, 40],
@@ -10,7 +10,7 @@ export const products = [
     installments: "ou 6x de R$ 28,31 sem juros",
   },
   {
-    imgSrc: "/assets/images/products/1.png",
+    imgSrc: "/assets/images/products/1.webp",
     imgAlt: "Sandália Soft Metalizado - Preta",
     discount: 36,
     sizes: [34, 35, 36, 37, 38, 39, 40],
@@ -20,7 +20,7 @@ export const products = [
     installments: "ou 6x de R$ 28,31 sem juros",
   },
   {
-    imgSrc: "/assets/images/products/2.png",
+    imgSrc: "/assets/images/products/2.webp",
     imgAlt: "Sapatilha Elegance - Rose",
     discount: 36,
     sizes: [34, 35, 36, 37, 38, 39, 40],
@@ -30,7 +30,7 @@ export const products = [
     installments: "ou 6x de R$ 28,31 sem juros",
   },
   {
-    imgSrc: "/assets/images/products/3.png",
+    imgSrc: "/assets/images/products/3.webp",
     imgAlt: "Plataforma em Nobuck - Whisky",
     discount: 36,
     sizes: [34, 35, 36, 37, 38, 39, 40],
