@@ -1,6 +1,4 @@
 import { create } from "zustand";
-import { devtools, persist } from "zustand/middleware";
-import type {} from "@redux-devtools/extension";
 
 interface StoreProps {
   likes: number;
