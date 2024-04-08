@@ -15,6 +15,7 @@ export const Header = styled("header")`
   width: 100%;
   height: clamp(72px, 10%, 72px);
   z-index: 1000;
+  transition: all 0.2s ease-in-out;
 
   > label {
     width: 100%;

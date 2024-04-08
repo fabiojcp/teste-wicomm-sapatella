@@ -5,6 +5,7 @@ import MultiCarousel from "@/components/multiCarousel";
 import PaymentBanner from "@/components/paymentBanner";
 import ProductsSections from "@/components/productsSection";
 import ProductsSectionHighlight from "@/components/productsSectionHighlight";
+import SplitedSection from "@/components/splited";
 import WeekFavorites from "@/components/weekFavorites";
 
 import * as Static from "@/static";
@@ -25,8 +26,16 @@ const HomePage = () => {
 
       <MultiCarousel item={Static.multiCarouselItems} />
 
-      <WeekFavorites />
+      <WeekFavorites
+        props={{
+          title: "Favoritos da Semana",
+          totalSlides: 12,
+          slidesPerGroup: 4,
+          slidesPerView: 4,
+        }}
+      />
       <ProductsSectionHighlight />
+      <SplitedSection />
     </>
   );
 };

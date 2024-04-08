@@ -8,10 +8,21 @@ import * as S from "./styles";
 import { products } from "./static";
 import ProductCard from "../productCard";
 
-const WeekFavorites: React.FC = () => {
+interface WeekFavoritesProps {
+  title?: string;
+  totalSlides: number;
+  slidesPerGroup: number;
+  slidesPerView: number | "auto";
+  spaceBetween?: number;
+}
+
+const WeekFavorites = ({ props }: { props: WeekFavoritesProps }) => {
+  const { title, totalSlides, slidesPerGroup, slidesPerView, spaceBetween } =
+    props;
+
   return (
     <S.Wrapper>
-      <S.Title>Favoritos da Semana</S.Title>
+      {title && <S.Title>{title}</S.Title>}
 
       <S.ProductsWrapper>
         <Swiper
@@ -20,25 +31,23 @@ const WeekFavorites: React.FC = () => {
           modules={[Navigation, Pagination]}
           pagination={{
             clickable: true,
-            // el: pagination.current,
-            // renderBullet: (idx, className) => {
-            //   return RenderBullets(idx, className);
-            // },
           }}
-          slidesPerGroup={4}
-          slidesPerView={4}
+          slidesPerGroup={slidesPerGroup}
+          slidesPerView={slidesPerView}
           loop
           nested={true}
+          spaceBetween={spaceBetween}
         >
-          {Array.from({ length: 12 }, (_, index) => products[index % 4]).map(
-            (item, index) => {
-              return (
-                <SwiperSlide key={index}>
-                  <ProductCard item={item} />
-                </SwiperSlide>
-              );
-            }
-          )}
+          {Array.from(
+            { length: totalSlides },
+            (_, index) => products[index % 4]
+          ).map((item, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <ProductCard item={item} />
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </S.ProductsWrapper>
     </S.Wrapper>
