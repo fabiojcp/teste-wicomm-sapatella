@@ -104,6 +104,7 @@ export default createGlobalStyle`
     --black: rgb(0,0,0);
     --black40: rgb(0,0,0,0.4);
     --black4F: #4F4F4F;
+    --black02: #484848;
     --black03: #d3d3d3;
     --lightGrey: #F5F5F5;
   }

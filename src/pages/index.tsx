@@ -7,6 +7,7 @@ import MultiCarousel from "@/components/multiCarousel";
 import PaymentBanner from "@/components/paymentBanner";
 import ProductsSections from "@/components/productsSection";
 import ProductsSectionHighlight from "@/components/productsSectionHighlight";
+import RegisterSection from "@/components/register";
 import SplitedSection from "@/components/splited";
 import WeekFavorites from "@/components/weekFavorites";
 
@@ -37,6 +38,7 @@ const HomePage = () => {
       <SplitedSection />
       <ImageSection />
       <About />
+      <RegisterSection />
     </>
   );
 };
