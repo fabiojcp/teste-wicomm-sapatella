@@ -66,7 +66,7 @@ const MultiCarousel = ({ item }: { item: MultiCarouselProps }) => {
                   src={image.src}
                   alt={image.alt}
                   width={574}
-                  height={202}
+                  height={502}
                 />
               </S.ImageWrapper>
             </SwiperSlide>

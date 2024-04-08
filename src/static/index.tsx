@@ -2,8 +2,8 @@ import BannerModal from "@/components/bannerModal";
 
 export const bannerCarouselItems = {
   image: {
-    src: "/assets/banners/banner.png",
-    alt: "ícone de uma lupa",
+    src: "/assets/banners/banner.webp",
+    alt: "mulher com roupa rosa",
   },
   children: <BannerModal />,
 };
@@ -14,11 +14,11 @@ export const multiCarouselItems = {
   button: "É a minha cara",
   images: [
     {
-      src: "/assets/images/multiCarousel/image1.png",
+      src: "/assets/images/multiCarousel/image1.webp",
       alt: "mulher dentro de carrinho de supermercado",
     },
     {
-      src: "/assets/images/multiCarousel/image2.png",
+      src: "/assets/images/multiCarousel/image2.webp",
       alt: "duas mulheres com roupas de carnaval",
     },
   ],
