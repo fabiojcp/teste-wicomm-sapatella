@@ -16,7 +16,7 @@ const ImageSection = () => {
   return (
     <Wrapper>
       <Image
-        src="/assets/images/imageSection.webp"
+        src="/assets/images/imageSection.png"
         alt="duas mulheres em um escritório"
         width={1280}
         height={486}
