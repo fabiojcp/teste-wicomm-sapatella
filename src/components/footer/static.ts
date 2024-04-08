@@ -62,7 +62,7 @@ export const PaymentMethods = {
   title: "FORMAS DE PAGAMENTO",
   images: [
     {
-      src: "/assets/icons/footer/visa.svg",
+      src: "/assets/icons/footer/visa2.svg",
       alt: "visa logo",
       width: 34,
       height: 24,
