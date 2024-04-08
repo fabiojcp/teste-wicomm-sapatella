@@ -1,4 +1,5 @@
 import Seo from "@/components/Seo";
+import About from "@/components/about";
 import BannerCarousel from "@/components/bannerCarousel";
 import BannerModal from "@/components/bannerModal";
 import ImageSection from "@/components/imageSection";
@@ -21,12 +22,9 @@ const HomePage = () => {
       <BannerCarousel
         items={Array.from({ length: 3 }, () => Static.bannerCarouselItems)}
       />
-
       <PaymentBanner />
       <ProductsSections />
-
       <MultiCarousel item={Static.multiCarouselItems} />
-
       <WeekFavorites
         props={{
           title: "Favoritos da Semana",
@@ -38,6 +36,7 @@ const HomePage = () => {
       <ProductsSectionHighlight />
       <SplitedSection />
       <ImageSection />
+      <About />
     </>
   );
 };
