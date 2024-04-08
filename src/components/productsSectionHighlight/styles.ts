@@ -3,8 +3,10 @@ import { styled } from "goober";
 export const Wrapper = styled("section")`
   display: flex;
   width: 100%;
+  margin: 0 auto !important;
   padding: 40px 5% 100px 5% !important;
-  justify-content: space-between;
+  column-gap: 20px !important;
+  justify-content: center;
 
   background-color: var(--lightGrey);
 

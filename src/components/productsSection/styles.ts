@@ -3,6 +3,8 @@ import { styled } from "goober";
 export const Wrapper = styled("section")`
   width: 100%;
   height: 422px;
+  max-width: 1280px !important;
+   margin: 0 auto !important;
 
   display: flex;
   flex-direction: column;

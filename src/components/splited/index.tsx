@@ -6,10 +6,10 @@ const SplitedSection = () => {
   return (
     <S.Wrapper>
       <Image
-        src="/assets/images/multiCarousel/image1.png"
+        src="/assets/images/multiCarousel/image2.png"
         alt="duas mulheres com roupas de carnaval"
-        width={594}
-        height={479}
+        width={574}
+        height={402}
       />
 
       <WeekFavorites

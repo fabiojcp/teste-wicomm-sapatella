@@ -60,7 +60,6 @@ const ProductCard = ({ item }: { item: ProductCardProps }) => {
             alt="Heart icon"
             width={24}
             height={24}
-            priority
             onClick={() => setLike(!like)}
           />
         </S.ImgIcon>
@@ -113,7 +112,6 @@ const ProductCard = ({ item }: { item: ProductCardProps }) => {
                 alt="Next button"
                 width={24}
                 height={24}
-                priority
               />
             </div>
             <div
@@ -126,7 +124,6 @@ const ProductCard = ({ item }: { item: ProductCardProps }) => {
                 alt="Previous button"
                 width={24}
                 height={24}
-                priority
               />
             </div>
           </S.InfoTextWrapper>

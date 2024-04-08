@@ -2,7 +2,9 @@ import { styled } from "goober";
 
 export const Wrapper = styled("section")`
   width: 100%;
-  padding: 2% 5% !important;
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+  padding: 2% 0 !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,6 +64,10 @@ export const ProductsWrapper = styled("div")`
     border-radius: 100%;
     background-color: var(--white80) !important;
     color: var(--black) !important;
+    margin-top: -60px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:after {
       display: flex;

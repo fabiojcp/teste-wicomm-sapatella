@@ -16,10 +16,8 @@ export const CarouselItem = ({ image, children }: CarouselItemProps) => {
       <Image
         src={image.src}
         alt={image.alt}
-        width={1920}
-        height={1080}
-        quality={100}
-        priority
+        width={1280}
+        height={680}
       />
       {children && children}
     </S.Wrapper>

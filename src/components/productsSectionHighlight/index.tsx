@@ -19,7 +19,6 @@ export const ProductsSectionHighlight = () => {
               src="/assets/icons/arrowRight.svg"
               width={24}
               height={24}
-              priority
               alt="Seta para direita preta"
             />
           </S.Link>
@@ -29,7 +28,6 @@ export const ProductsSectionHighlight = () => {
           src="/assets/images/highLight/0.png"
           width={376}
           height={302}
-          priority
           alt="Foto de pés de uma mulher com rasteiras brancas"
         />
       </S.FromTop>
@@ -39,7 +37,6 @@ export const ProductsSectionHighlight = () => {
           src="/assets/images/highLight/1.png"
           width={376}
           height={456}
-          priority
           alt="Foto de pés de uma mulher com sandália rosa"
         />
 
@@ -50,7 +47,6 @@ export const ProductsSectionHighlight = () => {
               src="/assets/icons/arrowRight.svg"
               width={24}
               height={24}
-              priority
               alt="Seta para direita preta"
             />
           </S.Link>
@@ -62,7 +58,6 @@ export const ProductsSectionHighlight = () => {
           src="/assets/images/highLight/2.png"
           width={376}
           height={354}
-          priority
           alt="Foto de pés de uma mulher com tênis branco"
         />
 
@@ -87,7 +82,6 @@ export const ProductsSectionHighlight = () => {
               src="/assets/icons/arrowRightFill.svg"
               width={24}
               height={24}
-              priority
               alt="Seta para direita preta"
             />
           </S.Link>

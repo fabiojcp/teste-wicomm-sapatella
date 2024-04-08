@@ -154,4 +154,8 @@ table {
 	border-spacing: 0;
 }
 
+#__next {
+  margin: 0 auto;
+}
+
 `;
