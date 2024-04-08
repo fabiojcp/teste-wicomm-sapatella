@@ -44,6 +44,8 @@ export const ImgIcon = styled("div")`
   > img {
     cursor: pointer !important;
   }
+
+
 `;
 
 export const InfoWrapper = styled("div")`

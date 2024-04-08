@@ -9,6 +9,7 @@ import Image from "next/image";
 import * as S from "./styles";
 import useLocalStorage from "@/hooks/useLocalStorage";
 import { NavigationOptions } from "swiper/types";
+import useStoreContext from "@/context";
 
 interface ProductCardProps {
   imgSrc: string;
@@ -36,12 +37,16 @@ const ProductCard = ({ item }: { item: ProductCardProps }) => {
   } = item;
 
   const [like, setLike] = useState(false);
+  const [bag, setBag] = useState(false);
+
   const [sizeSelected, setSizeSelected] = useState<number | undefined>(
     undefined
   );
 
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
+
+  const { updateLikes, updateBag } = useStoreContext();
 
   return (
     <S.Wrapper>
@@ -60,7 +65,10 @@ const ProductCard = ({ item }: { item: ProductCardProps }) => {
             alt="Heart icon"
             width={24}
             height={24}
-            onClick={() => setLike(!like)}
+            onClick={() => {
+              like ? updateLikes(-1) : updateLikes(1);
+              setLike(!like);
+            }}
           />
         </S.ImgIcon>
 
@@ -127,7 +135,14 @@ const ProductCard = ({ item }: { item: ProductCardProps }) => {
               />
             </div>
           </S.InfoTextWrapper>
-          <S.InfoButton>Adicionar à sacola</S.InfoButton>
+          <S.InfoButton
+            onClick={() => {
+              bag ? updateBag(-1) : updateBag(1);
+              setBag(!bag);
+            }}
+          >
+            Adicionar à sacola
+          </S.InfoButton>
         </S.InfoWrapper>
       </S.ImgWrapper>
 

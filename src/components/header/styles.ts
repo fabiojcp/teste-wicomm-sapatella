@@ -38,6 +38,7 @@ export const Header = styled("header")`
     > a > img,
     > div > a > img,
     > label > img,
+    img,
     > nav:nth-child(4) > img {
       filter: invert(1);
     }
@@ -78,7 +79,27 @@ export const NavIcons = styled("nav")`
   display: flex;
   gap: 24px;
 
-  > img {
+  > div {
+    position: relative;
+  }
+  img {
     cursor: pointer;
+  }
+
+  .countStore {
+    position: absolute;
+    right: -6px;
+    top: -4px;
+    background-color: var(--pink) !important;
+    font-size: 10px !important;
+    line-height: 12px !important;
+    width: 14px !important;
+    height: 14px !important;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px !important;
+    color: var(--white) !important;
   }
 `;

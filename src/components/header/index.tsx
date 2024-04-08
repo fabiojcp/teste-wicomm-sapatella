@@ -3,8 +3,11 @@ import Link from "next/link";
 import Input from "../input";
 import * as S from "./styles";
 import Logo from "@/components/logo";
+import useStoreContext from "@/context";
 
 const Header = () => {
+  const { likes, bag } = useStoreContext();
+
   return (
     <S.Header>
       <Logo />
@@ -31,22 +34,28 @@ const Header = () => {
           width={24}
           height={24}
           quality={50}
-        />{" "}
-        <Image
-          src="/assets/icons/heart.svg"
-          alt="aaaaaaa"
-          width={24}
-          height={24}
-          quality={50}
-          style={{ width: 24, height: 24 }}
-        />{" "}
-        <Image
-          src="/assets/icons/shopping-cart.svg"
-          alt="aaaaaaa"
-          width={24}
-          height={24}
-          quality={50}
         />
+        <div>
+          <Image
+            src="/assets/icons/heart.svg"
+            alt="aaaaaaa"
+            width={24}
+            height={24}
+            quality={50}
+            style={{ width: 24, height: 24 }}
+          />
+          {likes > 0 && <span className="countStore">{likes}</span>}
+        </div>
+        <div>
+          <Image
+            src="/assets/icons/shopping-cart.svg"
+            alt="aaaaaaa"
+            width={24}
+            height={24}
+            quality={50}
+          />
+          {bag > 0 && <span className="countStore">{bag}</span>}
+        </div>
       </S.NavIcons>
     </S.Header>
   );
